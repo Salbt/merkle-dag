@@ -2,6 +2,7 @@ package kvstore
 
 import (
 	"log"
+
 	"github.com/syndtr/goleveldb/leveldb"
 )
 
@@ -21,7 +22,6 @@ func NewLevelDB(path string) *LevelDB {
 }
 
 func (kv LevelDB) Close() error {
-	log.Fatal("leveldb is closing")
 	return kv.db.Close()
 }
 
